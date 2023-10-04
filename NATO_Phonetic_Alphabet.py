@@ -1,9 +1,9 @@
 def nato(word):
     str=''
-    dic=['Alpha', 'Bravo', 'Charlie','Delta','Echo','Foxtrot','Golf','Hotel','India','Juliett','Kilo','Limo','Mika','November','Oscar','Papa','Quebec','Romeo','Sierra','Tango','Uniform','Victor','Whishkey','Xray','Yankee','Zulu']
+    dic=['Alpha', 'Bravo', 'Charlie','Delta','Echo','Foxtrot','Golf','Hotel','India','Juliett','Kilo','Lima','Mika','November','Oscar','Papa','Quebec','Romeo','Sierra','Tango','Uniform','Victor','Whishkey','Xray','Yankee','Zulu']
     for i in word.lower():
         str+=dic[ord(i)-97]+" "
-    return(str)
+    return(str.rstrip())
     pass
 
 print(nato('hi'))
