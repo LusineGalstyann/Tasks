@@ -1,18 +1,10 @@
 def persistence(n):
-    digit = []
-    step = 0
-    while n > 10:
-        digit.append(n % 10)
-        n = n // 10
-    digit.append(n)
-    mul = 1
-    while mul > 10 or step==0:
-        for i in digit:
-            print(i)
-            mul *= i
-            step += 1
-    print(mul)
-    print(step)
+    if n < 10:
+        return 0
+    m = 1
+    for i in str(n):
+        m *= int(i)
+    return 1 + persistence(m)
 
 
-persistence(144)
+print(persistence(39))
